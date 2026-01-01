@@ -1,0 +1,10 @@
+{
+	"folders": [
+		{
+			"path": "../where-when-born"
+		}
+	],
+	"settings": {
+		"liveServer.settings.multiRootWorkspaceName": "where-when-born"
+	}
+}

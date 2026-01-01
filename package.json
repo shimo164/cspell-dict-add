@@ -1,0 +1,57 @@
+{
+  "name": "cspell-dict-add",
+  "displayName": "CSpell Dict Add",
+  "description": "Add unknown words from cSpell diagnostics to a custom dictionary.",
+  "version": "0.1.0",
+  "publisher": "local",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/shimo164/cspell-dict-add.git"
+  },
+  "engines": {
+    "vscode": "^1.80.0"
+  },
+  "categories": [
+    "Other"
+  ],
+  "activationEvents": [
+    "onCommand:cspell-dict-add.open"
+  ],
+  "main": "./dist/extension.js",
+  "contributes": {
+    "commands": [
+      {
+        "command": "cspell-dict-add.open",
+        "title": "CSpell Dict Add: Open"
+      }
+    ],
+    "configuration": {
+      "title": "CSpell Dict Add",
+      "properties": {
+        "cspellDictAdd.dictionaryKey": {
+          "type": "string",
+          "default": "custom-dictionary-user",
+          "description": "Key in cSpell.customDictionaries to use as the target dictionary."
+        },
+        "cspellDictAdd.minOccurrence": {
+          "type": "number",
+          "default": 1,
+          "minimum": 1,
+          "description": "Minimum number of occurrences required to show a word in the list."
+        }
+      }
+    }
+  },
+  "scripts": {
+    "compile": "tsc -p ./",
+    "watch": "tsc -watch -p ./",
+    "vscode:prepublish": "npm run compile"
+  },
+  "devDependencies": {
+    "@types/node": "^18.19.0",
+    "@types/vscode": "^1.80.0",
+    "typescript": "^5.4.0",
+    "vscode": "^1.1.37"
+  }
+}

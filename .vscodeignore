@@ -1,0 +1,7 @@
+.vscode/**
+src/**
+node_modules/**
+package-lock.json
+tsconfig.json
+SPEC.md
+*.code-workspace
